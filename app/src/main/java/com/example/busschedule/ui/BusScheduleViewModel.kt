@@ -11,7 +11,7 @@ import com.example.busschedule.data.BusSchedule
 import com.example.busschedule.data.BusScheduleDao
 import kotlinx.coroutines.flow.Flow
 
-
+/*roporciona funciones para obtener los horarios de los autobuses desde la base de datos*/
 class BusScheduleViewModel(private val busScheduleDao: BusScheduleDao): ViewModel() {
 
     fun getFullSchedule(): Flow<List<BusSchedule>> = busScheduleDao.getAll()

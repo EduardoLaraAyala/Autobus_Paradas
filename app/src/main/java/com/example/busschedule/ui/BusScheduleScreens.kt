@@ -45,7 +45,13 @@ import com.example.busschedule.data.BusSchedule
 import com.example.busschedule.ui.theme.BusScheduleTheme
 import java.text.SimpleDateFormat
 import java.util.*
-
+/*este codigo representa la interfaz del uusuario
+*
+* define la estructura y los componentes necesarios para mostrar
+* los horarios de los autobuses en la aplicación Bus Schedule,
+* permitiendo la navegación entre la vista completa de los horarios
+* y los horarios de una ruta específica en una parada determinada.
+* */
 enum class BusScheduleScreens {
     FullSchedule,
     RouteSchedule

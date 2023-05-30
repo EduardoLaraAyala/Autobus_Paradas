@@ -24,7 +24,6 @@ interface BusScheduleDao {
         ORDER BY arrival_time ASC 
         """
     )
-
     /*realiza una consulta a la base de datos para obtener los registros
     de la tabla schedule que coinciden con el nombre de parada stopName.
     y los ordena ascendentemente dependiendo su hora*/
