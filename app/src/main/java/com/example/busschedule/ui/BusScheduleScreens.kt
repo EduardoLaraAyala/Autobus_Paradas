@@ -56,7 +56,9 @@ enum class BusScheduleScreens {
     FullSchedule,
     RouteSchedule
 }
-
+/*este codigo es el punto de entrada principal de la aplicación Bus Schedule y
+configura la navegación entre las diferentes pantallas de la aplicación, mostrando los horarios completos
+y los horarios de una ruta específica.*/
 @Composable
 fun BusScheduleApp(
     viewModel: BusScheduleViewModel = viewModel(factory = BusScheduleViewModel.factory)
@@ -112,7 +114,8 @@ fun BusScheduleApp(
         }
     }
 }
-
+/*crea una pantalla que muestra los horarios
+completos de los autobuses en la aplicación*/
 @Composable
 fun FullScheduleScreen(
     busSchedules: List<BusSchedule>,
@@ -125,7 +128,10 @@ fun FullScheduleScreen(
         modifier = modifier
     )
 }
-
+/*es un componente composable que muestra la pantalla de horarios de una
+ruta específica en la aplicación Bus Schedule. Permite al usuario ver los
+ horarios de los autobuses para esa ruta y proporciona una función de
+ retroceso para volver a la pantalla anterior*/
 @Composable
 fun RouteScheduleScreen(
     stopName: String,
@@ -140,7 +146,9 @@ fun RouteScheduleScreen(
         stopName = stopName
     )
 }
-
+/*representa la pantalla de horarios de autobuses en la aplicación Bus Schedule. Muestra el nombre
+de la parada de autobús, las etiquetas de "Nombre de parada" y "Hora de llegada", y los horarios de
+los autobuses.*/
 @Composable
 fun BusScheduleScreen(
     busSchedules: List<BusSchedule>,
@@ -171,7 +179,8 @@ fun BusScheduleScreen(
         )
     }
 }
-
+/*muestra los detalles de los horarios de los autobuses en forma de una lista. Cada horario de autobús
+se muestra en una fila con el nombre de la parada y la hora de llegada*/
 @Composable
 fun BusScheduleDetails(
     busSchedules: List<BusSchedule>,
@@ -228,7 +237,8 @@ fun BusScheduleDetails(
         }
     }
 }
-
+/*representa la barra de la parte superior en la pantalla de horarios
+de autobuses. Muestra un título*/
 @Composable
 fun BusScheduleTopAppBar(
     title: String,
@@ -258,7 +268,10 @@ fun BusScheduleTopAppBar(
         )
     }
 }
-
+/*se utiliza para generar una vista previa del composable
+FullScheduleScreen
+* visualiza cómo se vería la pantalla de horarios de autobuses
+* */
 @Preview(showBackground = true)
 @Composable
 fun FullScheduleScreenPreview() {
@@ -275,7 +288,9 @@ fun FullScheduleScreenPreview() {
         )
     }
 }
-
+/*se utiliza para generar una vista previa del composable
+RouteScheduleScreen.
+visualiza cómo se vería la pantalla de horarios de ruta con datos*/
 @Preview(showBackground = true)
 @Composable
 fun RouteScheduleScreenPreview() {
